@@ -1,0 +1,102 @@
+[
+  {
+    "title": "stegaknows",
+    "description": "Steganography tool that conceals data within images. Supports both text-in-image and image-in-image embedding for secure data hiding.",
+    "tech": ["typescript", "next.js", "tailwindcss"],
+    "liveDemo": "https://stegaknows.vercel.app",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/stegaknows"
+  },
+  {
+    "title": "spectop",
+    "description": "AI-powered laptop comparison tool that helps users find the perfect laptop based on their needs. Analyzes and compares laptops from Amazon and Flipkart to deliver accurate and personalized recommendations.",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Puppeteer",
+      "Google Gemini"
+    ],
+    "liveDemo": "https://spectop.vercel.app",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/spectop"
+  },
+  {
+    "title": "payd",
+    "description": "Monorepo fintech platform built with Turborepo, enabling users to manage digital wallets, add funds via on-ramp transactions, and conduct secure payments, with separate Next.js interfaces for users and merchants, including a webhook handler for bank integrations",
+    "tech": [
+      "typescript",
+      "next.js",
+      "prisma",
+      "postgresql",
+      "tailwindcss",
+      "recoil",
+      "turborepo"
+    ],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/payd"
+  },
+  {
+    "title": "floatingCipboard.nvim",
+    "description": "A lightweight Neovim plugin to track and browse yank history using a floating window. Built with Lua, designed for multi-tab, multi-pane workflows - even across tmux splits.",
+    "tech": ["Lua", "Neovim"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/floatingClipboard.nvim"
+  },
+  {
+    "title": "bit-chess",
+    "description": "Real-time chess platform for head-to-head matches with instant move updates and synchronized gameplay",
+    "tech": ["javascript", "react", "socket.io", "postgreSQL", "prisma"],
+    "liveDemo": "https://bit-chess.vercel.app",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/bit-chess"
+  },
+  {
+    "title": "pursace",
+    "description": "A web-base crypto wallet application supporting Ethereum and Solana blockchains, allowing users to create and manage wallets",
+    "tech": [
+      "typescript",
+      "next.js",
+      "tailwindcss",
+      "@solana/web3.js",
+      "ethers"
+    ],
+    "liveDemo": "https://pursace.vercel.app",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/pursace"
+  },
+  {
+    "title": "nature-of-code-rs",
+    "description": "Implementing concepts from Daniel Shiffman's Nature of Code using Rust and Macroquad",
+    "tech": ["rust", "macroquad"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/nature_of_code_rs"
+  },
+  {
+    "title": "digital-wallet",
+    "description": "A basic digital wallet application allowing users to sign up, receive a random initial balance, and perform transactions securely",
+    "tech": [
+      "javascript",
+      "react",
+      "node.js",
+      "postgresql",
+      "prisma",
+      "tailwindcss"
+    ],
+    "liveDemo": "https://digital-wallet-chi.vercel.app",
+    "sourceCode": "https://gihthub.com/hamzahshahbazkhan/Digital-Wallet"
+  },
+  {
+    "title": "dodge",
+    "description": "An implementation of circle dodger game in rust using macroquad with increasing difficulty",
+    "tech": ["rust", "macroquad"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/dodge"
+  },
+  {
+    "title": "flappyish bird ",
+    "description": "An implementation of the infamous flappy bird game in html canvas",
+    "tech": ["html", "html canvas", "js", "css"],
+    "liveDemo": "https://thebiggerpicture-flappybird.netlify.app/",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/Flappy-Bird-Game"
+  },
+  {
+    "title": "tic-tac-toe",
+    "description": "basic implementation of tic-tac-toe game.",
+    "tech": ["html", "js", "css"],
+    "liveDemo": "https://thebiggerpicture-tictactoe.netlify.app/",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/Tic-Tac-Toe"
+  }
+]

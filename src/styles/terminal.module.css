@@ -1,0 +1,663 @@
+/* CSS module reproducing the original styles, scoped under .terminal */
+
+/* CSS module reproducing the original styles, scoped under .terminal */
+
+.terminal {
+  /* Scope variables to wrapper to avoid global bleed */
+  /* --bg: #1d2021; */
+  /* --text: #d4be98; */
+  /* --text-dim: #7c6f64; */
+  /* --text-bright: #fbf1c7; */
+  /* --cyan: #89b482; */
+  /* --blue: #7daea3; */
+  /* --red: #ea6962; */
+  /* --orange: #e78a4e; */
+  /* --purple: #d3869b; */
+  /* --green: #a9b665; */
+  /* --code-bg: #282828; */
+  /* --border: #3c3836; */
+  /* --bg: #282828; */
+  /* --bg: #242424; */
+
+  --bg: #1d2021;
+  --text: #bdae93; /* main text, brighter */
+  --text-dim: #928374; /* comments, slightly muted */
+  --text-bright: #f2e5bc; /* for highlights, titles, or important text */
+  --cyan: #8ec07c;
+  --blue: #83a598;
+  --red: #fb4934;
+  --orange: #fe8019;
+  --purple: #d3869b;
+  --green: #b8bb26;
+  /* --code-bg: #23262a; */
+  --code-bg: #272b2c;
+  --border: #504945;
+  position: relative;
+
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.2;
+  padding: 2rem 3rem 1rem 4rem;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 2% 0 2%;
+}
+
+/* Grain overlay - visible retro CRT effect in front */
+.terminal::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 1px,
+    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.2) 2px
+  );
+}
+
+/* Container + load animation */
+.container {
+  max-width: 900px;
+  opacity: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.loaded {
+  animation: terminalLoad 0.3s ease forwards;
+}
+@keyframes terminalLoad {
+  to {
+    opacity: 1;
+  }
+}
+
+.container > span:last-of-type {
+  margin-top: auto;
+}
+
+/* Nav */
+.nav {
+  margin-bottom: 1rem;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.navList li {
+  position: relative;
+  padding-left: 0;
+}
+.navList li::before {
+  content: "- ";
+  color: var(--text-dim);
+}
+.navLink {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLink:hover {
+  color: var(--cyan);
+}
+.navLink.active {
+  color: var(--blue);
+}
+.backLink {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.backLink:hover {
+  color: var(--cyan);
+}
+
+/* Prompt line */
+.promptLine {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  white-space: pre;
+}
+.user {
+  color: var(--green);
+}
+.at {
+  color: var(--text);
+}
+.host {
+  color: var(--blue);
+}
+.path {
+  color: var(--text-dim);
+}
+.dollar {
+  color: var(--text-bright);
+}
+.command {
+  color: var(--purple);
+}
+
+/* Output line */
+.output {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+/* Headings */
+.h1 {
+  color: var(--purple);
+  margin: 1.5rem 0 1rem 0;
+}
+.h1::before {
+  content: "## ";
+  color: var(--purple);
+}
+.h2 {
+  color: var(--purple);
+  margin: 1rem 0.5rem 0.5rem 0;
+}
+.h2::before {
+  content: "### ";
+  color: var(--purple);
+}
+.h3 {
+  color: var(--orange);
+  margin: 1rem 0 0;
+}
+
+/* Generic text elements (scoped by wrapper) */
+.terminal p {
+  margin: 0 0 0 0;
+  color: var(--text);
+}
+.terminal a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+.terminal a:hover {
+  color: var(--cyan);
+}
+.ul {
+  list-style: none;
+  margin: 0.25rem 0 1rem 0;
+  padding: 0;
+}
+.ul li {
+  margin-bottom: 0.25rem;
+}
+.ul li::before {
+  content: "- ";
+  color: var(--text-dim);
+}
+
+/* Accents */
+.tech {
+  color: var(--orange);
+}
+.comment {
+  color: var(--text-dim);
+}
+.label {
+  color: var(--cyan);
+}
+.highlight {
+  color: var(--orange);
+}
+
+/* Code and info */
+.code {
+  font-size: 14px;
+  background-color: var(--code-bg);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  color: var(--cyan);
+}
+.infoBox {
+  background-color: var(--code-bg);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.infoBox p {
+  margin-bottom: 0.5rem;
+}
+.infoBox p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards */
+.projectCard,
+.blogPost {
+  margin-bottom: 1.5rem;
+}
+.projectTitle {
+  color: var(--cyan);
+}
+.projectTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+.projectTitle a:hover {
+  color: inherit;
+}
+.date {
+  color: var(--border);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.projectLink::before {
+  color: var(--text-dim);
+}
+.projectLinks {
+  margin-left: 1em;
+  margin-top: 0.5rem;
+}
+
+/* Blog list helpers */
+.blogList {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+}
+.blogList li {
+  margin-bottom: 0.25rem;
+}
+
+/* Blog header styling - compact and consistent */
+.blogHeader {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blogTitle {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0 0 0.25rem 0;
+  color: var(--cyan);
+  line-height: 1.2;
+}
+
+.blogTitle a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.blogTitle a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--cyan);
+}
+
+.blogDate {
+  font-size: 1rem;
+  color: var(--text-dim);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.blogSeparator {
+  margin: 0.5rem 0;
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* Blog content styling - compact like terminal */
+.blogContent {
+  line-height: 1.2;
+  max-width: none;
+  font-size: 1rem;
+}
+
+/* Blog headings - raw markdown style with hashes */
+.blogH2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 1rem 0 0.5rem 0;
+  color: var(--cyan);
+  line-height: 1.2;
+}
+
+.blogH2::before {
+  content: "## ";
+  color: var(--cyan);
+}
+
+.blogH3 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.8rem 0 0.4rem 0;
+  color: var(--purple);
+  line-height: 1.2;
+}
+
+.blogH3::before {
+  content: "### ";
+  color: var(--purple);
+}
+
+.blogH4 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.6rem 0 0.3rem 0;
+  color: var(--green);
+  line-height: 1.2;
+}
+
+.blogH4::before {
+  content: "#### ";
+  color: var(--green);
+}
+
+.blogH5 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.5rem 0 0.25rem 0;
+  color: var(--blue);
+  line-height: 1.2;
+}
+
+.blogH5::before {
+  content: "##### ";
+  color: var(--blue);
+}
+
+.blogH6 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.4rem 0 0.2rem 0;
+  color: var(--orange);
+  line-height: 1.2;
+}
+
+.blogH6::before {
+  content: "###### ";
+  color: var(--orange);
+}
+
+/* Blog paragraphs - compact spacing */
+.blogP {
+  margin: 0.25rem 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* Blog code styling - inline with terminal */
+.blogPre {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  overflow-x: auto;
+  background-color: var(--code-bg);
+  border-left: 2px solid var(--text-dim);
+  line-height: 1.2;
+  font-size: 1rem;
+}
+.blogPre.hljs {
+  background-color: #282828 !important;
+}
+
+.blogCode {
+  font-size: 1rem;
+  background-color: var(--code-bg);
+  padding: 0.1rem 0.3rem;
+  color: var(--cyan);
+}
+
+.blogPre .blogCode {
+  background-color: transparent;
+  padding: 0;
+  color: var(--text);
+}
+
+/* Blog lists - compact with dashes */
+.blogUl,
+.blogOl {
+  margin: 0.5rem 0;
+  padding-left: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+  list-style: none;
+}
+
+.blogLi {
+  margin-bottom: 0.25rem;
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.2;
+}
+
+.blogLi::before {
+  content: "- ";
+  color: var(--text-dim);
+  position: absolute;
+  left: 0;
+}
+
+/* Blog links */
+.blogLink {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  transition: color 0.2s ease;
+}
+
+.blogLink:hover {
+  color: var(--cyan);
+  text-decoration-color: var(--cyan);
+}
+
+/* Blog blockquotes - compact */
+.blogBlockquote {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border-left: 2px solid var(--text-dim);
+  background-color: transparent;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--text-dim);
+}
+
+/* Blog images - compact */
+.blogImg {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+/* Blog horizontal rule */
+.blogHr {
+  border: none;
+  border-top: 1px solid var(--text-dim);
+  margin: 0.5rem 0;
+}
+
+
+
+/* Blog tables - minimal terminal style */
+.blogTableWrapper {
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.blogTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.2;
+  border: 1px solid var(--border);
+}
+
+.blogThead {
+  background: transparent;
+}
+
+.blogTbody {
+  background: transparent;
+}
+
+.blogTr {
+  border-bottom: 1px solid var(--border);
+}
+
+.blogTr:last-child {
+  border-bottom: none;
+}
+
+.blogTh {
+  padding: 0.3rem 0.5rem;
+  text-align: left;
+  font-weight: normal;
+  color: var(--cyan);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+
+.blogTh:last-child {
+  border-right: none;
+}
+
+.blogTd {
+  padding: 0.3rem 0.5rem;
+  border-right: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+
+.blogTd:last-child {
+  border-right: none;
+}
+
+/* Blog filters - compact like nav */
+.blogFilters {
+  margin: 0.5rem 0;
+}
+
+.blogFilterList {
+  display: flex;
+  gap: 1rem;
+}
+
+.blogFilterLink {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-dim);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.blogFilterLink:hover {
+  color: var(--cyan);
+}
+
+.blogFilterLink.active {
+  color: var(--blue);
+}
+
+/* Blog strong and em */
+.blogStrong {
+  font-weight: bold;
+  color: var(--text-bright);
+}
+
+.blogEm {
+  font-style: italic;
+  color: var(--text);
+}
+
+/* Read more link */
+.readMore {
+  color: var(--blue);
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+.readMore::before {
+  content: "→ ";
+}
+
+/* Divider */
+.divider {
+  margin: 3rem 0;
+  color: var(--text-dim);
+}
+
+/* Blockquote border */
+.blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Cursor */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  background: var(--text-bright);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+.typeCursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--text-bright);
+  margin-left: 3px;
+  vertical-align: -2px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Pages show/hide */
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terminal {
+    padding: 2rem 2rem 2rem 3rem;
+    font-size: 18px;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .navList {
+    gap: 0.75rem;
+  }
+}
+
+/* .terminal ::selection { */
+/* background: var(--orange-transparent); */
+/* color: var(--bg); */
+/* } */ /* In your global CSS or at the top of your module with :global() */

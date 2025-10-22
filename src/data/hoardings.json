@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1",
+    "type": "website",
+    "title": "Example Tech Website",
+    "url": "https://example.com",
+    "description": "A useful tech resource",
+    "category": "tech"
+  },
+  {
+    "id": "2",
+    "type": "article",
+    "title": "Interesting Article",
+    "url": "https://example.com/article",
+    "description": "An insightful article on technology",
+    "category": "tech"
+  },
+  {
+    "id": "3",
+    "type": "book",
+    "title": "Programming Book",
+    "url": "https://example.com/book",
+    "description": "A comprehensive guide to programming",
+    "category": "tech"
+  },
+  {
+    "id": "4",
+    "type": "paper",
+    "title": "Research Paper",
+    "url": "https://example.com/paper",
+    "description": "Academic paper on computer science",
+    "category": "tech"
+  },
+  {
+    "id": "5",
+    "type": "video",
+    "title": "YouTube Tutorial",
+    "url": "https://youtube.com/watch?v=example",
+    "description": "Great tutorial video",
+    "category": "tech"
+  },
+  {
+    "id": "6",
+    "type": "website",
+    "title": "Non-Tech Website",
+    "url": "https://example.com/non-tech",
+    "description": "Interesting non-tech resource",
+    "category": "other"
+  },
+  {
+    "id": "7",
+    "type": "tool",
+    "title": "Useful Tool",
+    "url": "https://example.com/tool",
+    "description": "A helpful development tool",
+    "category": "tech"
+  }
+]
+

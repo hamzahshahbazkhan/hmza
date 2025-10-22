@@ -1,0 +1,154 @@
+/* Global styles for the terminal portfolio */
+
+/* CSS Reset - Remove all default browser margins and padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #1d2021;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 18px;
+}
+
+/* Reset heading sizes to match body */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Syntax highlighting - Terminal Theme */
+.hljs {
+  background: var(--code-bg) !important;
+  color: var(--text) !important;
+}
+.hljs-comment {
+  color: var(--text-dim) !important;
+}
+.hljs-quote {
+  color: var(--text-dim) !important;
+}
+.hljs-variable {
+  color: var(--text) !important;
+}
+.hljs-template-variable {
+  color: var(--text) !important;
+}
+.hljs-tag {
+  color: var(--text) !important;
+}
+.hljs-name {
+  color: var(--text) !important;
+}
+.hljs-selector-id {
+  color: var(--purple) !important;
+}
+.hljs-selector-class {
+  color: var(--purple) !important;
+}
+.hljs-regexp {
+  color: var(--cyan) !important;
+}
+.hljs-deletion {
+  color: var(--purple) !important;
+}
+.hljs-number {
+  color: var(--purple) !important;
+}
+.hljs-built_in {
+  color: var(--orange) !important;
+}
+.hljs-builtin-name {
+  color: var(--orange) !important;
+}
+.hljs-literal {
+  color: var(--purple) !important;
+}
+.hljs-type {
+  color: var(--orange) !important;
+}
+.hljs-params {
+  color: var(--text) !important;
+}
+.hljs-meta {
+  color: var(--orange) !important;
+}
+.hljs-header {
+  color: var(--orange) !important;
+}
+.hljs-attribute {
+  color: var(--cyan) !important;
+}
+.hljs-symbol {
+  color: var(--cyan) !important;
+}
+.hljs-bullet {
+  color: var(--cyan) !important;
+}
+.hljs-link {
+  color: var(--blue) !important;
+  text-decoration: underline !important;
+}
+.hljs-title {
+  color: var(--orange) !important;
+}
+.hljs-section {
+  color: var(--orange) !important;
+}
+.hljs-keyword {
+  color: var(--purple) !important;
+}
+.hljs-selector-tag {
+  color: var(--purple) !important;
+}
+.hljs-string {
+  color: var(--cyan) !important;
+}
+.hljs-subst {
+  color: var(--text) !important;
+}
+.hljs-emphasis {
+  color: var(--text) !important;
+  font-style: italic !important;
+}
+.hljs-strong {
+  color: var(--text) !important;
+}
+.hljs-function {
+  color: var(--blue) !important;
+}
+.hljs-class {
+  color: var(--orange) !important;
+}
+.hljs-addition {
+  color: var(--cyan) !important;
+}
+.hljs-meta-keyword {
+  color: var(--orange) !important;
+}
