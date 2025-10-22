@@ -3,7 +3,7 @@
 import styles from "../../styles/terminal.module.css";
 import projects from "../../data/projects.json";
 
-export function ProjectsPage({ active }: { active: boolean }) {
+export function ProjectsPage({ active = true }: { active?: boolean }) {
   return (
     <div
       id="projects-page"

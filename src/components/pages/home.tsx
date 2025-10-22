@@ -4,12 +4,8 @@ import { Cursor } from "../cursor";
 import { Link } from "react-router-dom";
 import styles from "../../styles/terminal.module.css";
 import projects from "../../data/projects.json";
-import { getAllBlogs } from "../../utils/blogParser";
 
-export function HomePage({ active }: { active: boolean }) {
-  const recentBlogs = getAllBlogs()
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 2);
+export function HomePage({ active = true }: { active?: boolean }) {
 
   return (
     <div

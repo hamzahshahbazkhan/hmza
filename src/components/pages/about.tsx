@@ -2,7 +2,7 @@
 
 import styles from "../../styles/terminal.module.css";
 
-export function AboutPage({ active }: { active: boolean }) {
+export function AboutPage({ active = true }: { active?: boolean }) {
   return (
     <div
       id="about-page"

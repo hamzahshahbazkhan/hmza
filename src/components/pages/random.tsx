@@ -12,12 +12,12 @@ interface HoardingItem {
 }
 
 interface RandomPageProps {
-  active: boolean;
+  active?: boolean;
 }
 
 const hoardings: HoardingItem[] = hoardingsData as HoardingItem[];
 
-export function RandomPage({ active }: RandomPageProps) {
+export function RandomPage({ active = true }: RandomPageProps) {
   const [activeFilter, setActiveFilter] = useState<"all" | "tech" | "other">("all");
   const [activeType, setActiveType] = useState<"all" | "website" | "article" | "book" | "paper" | "video" | "tool">("all");
 

@@ -1,9 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
   useLocation,
   useParams,
 } from "react-router-dom";
@@ -48,7 +47,6 @@ function BlogPostWrapper() {
 
 function AppContent() {
   const location = useLocation();
-  const navigate = useNavigate();
   const [active, setActive] = useState<PageKey>("home");
 
   // Update active page based on current route
@@ -67,41 +65,11 @@ function AppContent() {
     } else if (path.startsWith("/blog/")) {
       setActive("blog-post");
     } else if (path === "/contact") {
-      setActive("contacts");
+      setActive("contact");
     }
   }, [location.pathname]);
 
-  const handleChange = useCallback(
-    (key: PageKey) => {
-      setActive(key);
-      if (typeof window !== "undefined") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
 
-      // Navigate to the appropriate route
-      switch (key) {
-        case "home":
-          navigate("/");
-          break;
-        case "about":
-          navigate("/about");
-          break;
-        case "projects":
-          navigate("/projects");
-          break;
-        case "blogs":
-          navigate("/blogs");
-          break;
-        case "random":
-          navigate("/random");
-          break;
-        case "contact":
-          navigate("/contact");
-          break;
-      }
-    },
-    [navigate],
-  );
 
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -142,32 +110,32 @@ function AppContent() {
             <PromptLine command="ls" />
           </>
         )}
-        <Nav active={active} onChange={handleChange} />
+        <Nav active={active} />
 
         <Routes>
-          <Route path="/" element={<HomePage active={active === "home"} />} />
-          <Route
-            path="/about"
-            element={<AboutPage active={active === "about"} />}
-          />
-          <Route
-            path="/projects"
-            element={<ProjectsPage active={active === "projects"} />}
-          />
-          <Route
-            path="/contact"
-            element={<ContactPage active={active === "contact"} />}
-          />
+           <Route path="/" element={<HomePage />} />
            <Route
-             path="/blogs"
-             element={<BlogsPage active={active === "blogs"} />}
+             path="/about"
+             element={<AboutPage />}
            />
            <Route
-             path="/random"
-             element={<RandomPage active={active === "random"} />}
+             path="/projects"
+             element={<ProjectsPage />}
            />
-           <Route path="/blog/:slug" element={<BlogPostWrapper />} />
-        </Routes>
+           <Route
+             path="/contact"
+             element={<ContactPage />}
+           />
+            <Route
+              path="/blogs"
+              element={<BlogsPage />}
+            />
+            <Route
+              path="/random"
+              element={<RandomPage />}
+            />
+            <Route path="/blog/:slug" element={<BlogPostWrapper />} />
+         </Routes>
       </div>
     </main>
   );

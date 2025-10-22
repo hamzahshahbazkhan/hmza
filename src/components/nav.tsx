@@ -3,14 +3,12 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/terminal.module.css";
 
-type PageKey = "home" | "about" | "projects" | "blogs" | "random" | "contact";
+type PageKey = "home" | "about" | "projects" | "blogs" | "blog-post" | "contact" | "random";
 
 export function Nav({
   active,
-  onChange,
 }: {
   active: PageKey;
-  onChange: (key: PageKey) => void;
 }) {
   // If not on home page, show back to home link
   if (active !== "home") {

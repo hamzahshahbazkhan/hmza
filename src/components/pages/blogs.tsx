@@ -4,10 +4,10 @@ import styles from "../../styles/terminal.module.css";
 import { getAllBlogs, getBlogsByCategory } from "../../utils/blogParser";
 
 interface BlogsPageProps {
-  active: boolean;
+  active?: boolean;
 }
 
-export function BlogsPage({ active }: BlogsPageProps) {
+export function BlogsPage({ active = true }: BlogsPageProps) {
   const [activeFilter, setActiveFilter] = useState<"all" | "tech" | "other">(
     "all",
   );
