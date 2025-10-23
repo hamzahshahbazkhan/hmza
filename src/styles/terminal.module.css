@@ -220,7 +220,7 @@
 
 /* Code and info */
 .code {
-  font-size: 14px;
+  font-size: 16px;
   background-color: var(--code-bg);
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
@@ -257,7 +257,7 @@
 .date {
   color: var(--border);
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 16px;
 }
 .projectLink::before {
   color: var(--text-dim);
@@ -284,7 +284,7 @@
 }
 
 .blogTitle {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 0 0 0.25rem 0;
   color: var(--cyan);
@@ -302,7 +302,7 @@
 }
 
 .blogDate {
-  font-size: 1rem;
+  font-size: 18px;
   color: var(--text-dim);
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
@@ -311,7 +311,7 @@
 .blogSeparator {
   margin: 0.5rem 0;
   color: var(--text-dim);
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -319,12 +319,12 @@
 .blogContent {
   line-height: 1.2;
   max-width: none;
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 /* Blog headings - raw markdown style with hashes */
 .blogH2 {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 1rem 0 0.5rem 0;
   color: var(--cyan);
@@ -337,7 +337,7 @@
 }
 
 .blogH3 {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 0.8rem 0 0.4rem 0;
   color: var(--purple);
@@ -350,7 +350,7 @@
 }
 
 .blogH4 {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 0.6rem 0 0.3rem 0;
   color: var(--green);
@@ -363,7 +363,7 @@
 }
 
 .blogH5 {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 0.5rem 0 0.25rem 0;
   color: var(--blue);
@@ -376,7 +376,7 @@
 }
 
 .blogH6 {
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: normal;
   margin: 0.4rem 0 0.2rem 0;
   color: var(--orange);
@@ -392,7 +392,7 @@
 .blogP {
   margin: 0.25rem 0;
   line-height: 1.2;
-  font-size: 1rem;
+  font-size: 18px;
   color: var(--text);
 }
 
@@ -404,14 +404,14 @@
   background-color: var(--code-bg);
   border-left: 2px solid var(--text-dim);
   line-height: 1.2;
-  font-size: 1rem;
+  font-size: 18px;
 }
 .blogPre.hljs {
   background-color: #282828 !important;
 }
 
 .blogCode {
-  font-size: 1rem;
+  font-size: 18px;
   background-color: var(--code-bg);
   padding: 0.1rem 0.3rem;
   color: var(--cyan);
@@ -429,7 +429,7 @@
   margin: 0.5rem 0;
   padding-left: 0;
   line-height: 1.2;
-  font-size: 1rem;
+  font-size: 18px;
   list-style: none;
 }
 
@@ -498,7 +498,7 @@
 .blogTable {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.2;
   border: 1px solid var(--border);
 }
@@ -557,7 +557,7 @@
 .blogFilterLink {
   background: none;
   border: none;
-  font-size: 1rem;
+  font-size: 18px;
   font-family: inherit;
   color: var(--text-dim);
   text-decoration: underline;
