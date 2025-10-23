@@ -10,6 +10,7 @@ export function AboutPage({ active = true }: { active?: boolean }) {
       className={`${styles.page} ${active ? styles.active : ""}`}
     >
       <h1 className={styles.h1}>About Me</h1>
+      <img src="/2686444.png" alt="Hamzah Khan" className={styles.blogImg} />
       <pre className={styles.host}>
         {String.raw`/$$
 | $$
