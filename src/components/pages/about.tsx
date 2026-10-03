@@ -25,7 +25,7 @@ export function AboutPage({ active = true }: { active?: boolean }) {
       </pre>{" "}
       <p>
         {
-          "Hey, I'm Hamzah. I write code that does things, preferably things I'd actually use. I am currently working as a full stack engineer using Typescript and I have lately been dabbling with Rust "
+          "Hey, I'm Hamzah. I write code that does things, preferably things I'd actually use. I am currently working as a Cyber Security Engineer and I have lately been dabbling with Rust "
         }
       </p>
       <p>

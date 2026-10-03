@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import styles from "../../styles/terminal.module.css";
 import projects from "../../data/projects.json";
 
+type Project = (typeof projects)[number];
+
+const featuredProjects: Project[] = projects.filter(
+  (project) => (project as { featured?: boolean }).featured,
+);
+
 export function HomePage({ active = true }: { active?: boolean }) {
 
   return (
@@ -37,10 +43,12 @@ export function HomePage({ active = true }: { active?: boolean }) {
         </Link>
       </h1>
 
-      {projects.slice(0, 4).map((project) => (
+      {featuredProjects.map((project) => (
         <div className={styles.projectCard} key={project.title}>
           <h3 className={styles.projectTitle}>
-            <a href={project.liveDemo}>{project.title}</a>
+            <a href={project.liveDemo ?? project.sourceCode}>
+              {project.title}
+            </a>
           </h3>
           <p>{project.description}</p>
           <p style={{ marginTop: "0.5rem" }}>
@@ -76,7 +84,7 @@ export function HomePage({ active = true }: { active?: boolean }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              github.com/hamzahshahbazkhan/{project.title}
+              {project.sourceCode.replace("https://github.com/", "")}
             </a>
           </p>
         </div>

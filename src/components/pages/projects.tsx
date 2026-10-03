@@ -57,7 +57,7 @@ export function ProjectsPage({ active = true }: { active?: boolean }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              github.com/hamzahshahbazkhan/{project.title}
+              {project.sourceCode.replace("https://github.com/", "")}
             </a>
           </p>
         </div>

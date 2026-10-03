@@ -1,14 +1,65 @@
 [
   {
+    "title": "oil.tabs",
+    "description": "Chrome extension prototype for managing browser tabs like oil.nvim — bookmark, arrange, reorder, close, mute and organize tabs with vim bindings.",
+    "tech": ["typescript", "vite", "codemirror", "chrome extension"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/oil.tabs"
+  },
+  {
+    "title": "monty_hall_sim",
+    "description": "Monty Hall problem simulator with a ratatui terminal UI — compares AlwaysSwitch, NeverSwitch and Random strategies with live win-rate stats.",
+    "tech": ["rust", "ratatui", "crossterm", "rand"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/monty_hall_sim"
+  },
+  {
+    "title": "sem_image_analysis_web",
+    "description": "Client-side SEM image measurement tool — detects scale bars, segments structures with OpenCV.js, and exports annotated images plus CSV. Fully in-browser, used with real microscope photos.",
+    "tech": ["javascript", "opencv.js", "html canvas", "css"],
+    "liveDemo": "https://sem-image-analysis-web.vercel.app",
+    "sourceCode": "https://github.com/hamzahshahbazkhan/sem_image_analysis_web",
+    "featured": true
+  },
+  {
+    "title": "sem_image_analysis",
+    "description": "Python tool that measures the largest dimension of every structure in SEM images via the info/scale bar, with OCR-assisted scale confirmation.",
+    "tech": ["python", "opencv", "ocr"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/sem_image_analysis"
+  },
+  {
+    "title": "blackjackrs",
+    "description": "Blackjack engine, simulator and trainer in Rust — cargo workspace with core rules, parallel simulation, TUI, trainer and CLI crates.",
+    "tech": ["rust", "rayon", "serde", "rand"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/blackjackrs"
+  },
+  {
+    "title": "ray-tracer",
+    "description": "Ray tracer written in Rust — vec3, ray and color primitives following the Ray Tracing in One Weekend approach.",
+    "tech": ["rust"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/ray-tracer"
+  },
+  {
+    "title": "perlin-noise-playground",
+    "description": "Collection of Rust experiments with Perlin noise and procedural generation — examples and binaries rendering grayscale noise and graphs.",
+    "tech": ["rust", "macroquad", "noise", "image"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/perlin-noise-playground-"
+  },
+  {
+    "title": "hamzah",
+    "description": "Personal blog built with Next.js — markdown posts with GFM, typography styling and Lucide icons.",
+    "tech": ["typescript", "next.js", "tailwindcss", "react-markdown"],
+    "sourceCode": "https://github.com/hamzahshahbazkhan/hamzah"
+  },
+  {
     "title": "stegaknows",
-    "description": "Steganography tool that conceals data within images. Supports both text-in-image and image-in-image embedding for secure data hiding.",
+    "description": "Full-stack steganography tool for concealing text-in-image and image-in-image, with client-side encode/decode flows and a deployed demo.",
     "tech": ["typescript", "next.js", "tailwindcss"],
     "liveDemo": "https://stegaknows.vercel.app",
-    "sourceCode": "https://github.com/hamzahshahbazkhan/stegaknows"
+    "sourceCode": "https://github.com/hamzahshahbazkhan/stegaknows",
+    "featured": true
   },
   {
     "title": "spectop",
-    "description": "AI-powered laptop comparison tool that helps users find the perfect laptop based on their needs. Analyzes and compares laptops from Amazon and Flipkart to deliver accurate and personalized recommendations.",
+    "description": "AI-assisted laptop finder that scrapes Amazon and Flipkart listings with Puppeteer and ranks personalized recommendations using Google Gemini.",
     "tech": [
       "Next.js",
       "TypeScript",
@@ -17,11 +68,12 @@
       "Google Gemini"
     ],
     "liveDemo": "https://spectop.vercel.app",
-    "sourceCode": "https://github.com/hamzahshahbazkhan/spectop"
+    "sourceCode": "https://github.com/hamzahshahbazkhan/spectop",
+    "featured": true
   },
   {
     "title": "payd",
-    "description": "Monorepo fintech platform built with Turborepo, enabling users to manage digital wallets, add funds via on-ramp transactions, and conduct secure payments, with separate Next.js interfaces for users and merchants, including a webhook handler for bank integrations",
+    "description": "Turborepo fintech monorepo with separate Next.js apps for users and merchants — wallet ledger on PostgreSQL/Prisma, on-ramp transactions, and a bank webhook handler for secure payments.",
     "tech": [
       "typescript",
       "next.js",
@@ -31,10 +83,11 @@
       "recoil",
       "turborepo"
     ],
-    "sourceCode": "https://github.com/hamzahshahbazkhan/payd"
+    "sourceCode": "https://github.com/hamzahshahbazkhan/payd",
+    "featured": true
   },
   {
-    "title": "floatingCipboard.nvim",
+    "title": "floatingClipboard.nvim",
     "description": "A lightweight Neovim plugin to track and browse yank history using a floating window. Built with Lua, designed for multi-tab, multi-pane workflows - even across tmux splits.",
     "tech": ["Lua", "Neovim"],
     "sourceCode": "https://github.com/hamzahshahbazkhan/floatingClipboard.nvim"
@@ -77,16 +130,16 @@
       "tailwindcss"
     ],
     "liveDemo": "https://digital-wallet-chi.vercel.app",
-    "sourceCode": "https://gihthub.com/hamzahshahbazkhan/Digital-Wallet"
+    "sourceCode": "https://github.com/hamzahshahbazkhan/Digital-Wallet"
   },
   {
-    "title": "dodge",
+    "title": "dodger",
     "description": "An implementation of circle dodger game in rust using macroquad with increasing difficulty",
     "tech": ["rust", "macroquad"],
-    "sourceCode": "https://github.com/hamzahshahbazkhan/dodge"
+    "sourceCode": "https://github.com/hamzahshahbazkhan/dodger"
   },
   {
-    "title": "flappyish bird ",
+    "title": "flappyish bird",
     "description": "An implementation of the infamous flappy bird game in html canvas",
     "tech": ["html", "html canvas", "js", "css"],
     "liveDemo": "https://thebiggerpicture-flappybird.netlify.app/",
